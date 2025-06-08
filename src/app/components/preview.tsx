@@ -83,12 +83,12 @@ export default function Preview() {
 
         <div className="flex flex-col md:flex-row justify-between items-center gap-10 lg:mr-10 xl:mr-0">
           {/* Video from Sanity */}
-          <motion.div
+           <motion.div
             initial={{ opacity: 0, x: -40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
             viewport={{ once: true }}
-            className="w-full xl:w-[80%] lg:w-[70%] sm:w-[70%] flex justify-center"
+            className="w-full xl:w-[80%] lg:w-[70%] sm:w-[70%] hidden md:flex justify-center"
           >
 
             {/* video for desktop */}
@@ -103,6 +103,25 @@ export default function Preview() {
               />
             )}
           </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: -40 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true }}
+            className="w-full xl:w-[80%] md:hidden lg:w-[70%] sm:w-[70%] flex justify-center"
+          >
+
+            {/* video for desktop */}
+            {preview.mobVideoUrl && (
+              <video
+                src={preview.mobVideoUrl}
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-[100%] md:w-[85%] 2xl:w-[80%] h-auto md:max-h-[350px] lg:max-h-[400px] xl:max-h-[440px] 2xl:max-h-[562px] justify-center items-center object-cover max-h-[362px] rounded-[24px] sm:rounded-[32px] md:rounded-[39px]"
+              />
+            )}
 
           {/* Points content box remains unchanged */}
           <motion.div
