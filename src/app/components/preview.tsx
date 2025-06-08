@@ -122,6 +122,7 @@ export default function Preview() {
                 className="w-[100%] md:w-[85%] 2xl:w-[80%] h-auto md:max-h-[350px] lg:max-h-[400px] xl:max-h-[440px] 2xl:max-h-[562px] justify-center items-center object-cover max-h-[362px] rounded-[24px] sm:rounded-[32px] md:rounded-[39px]"
               />
             )}
+            </motion.div>
 
           {/* Points content box remains unchanged */}
           <motion.div
